@@ -24,7 +24,7 @@
             app:srcCompat="@drawable/whatsapp" />
 
         <EditText
-            android:id="@+id/userName"
+            android:id="@+id/userNamelist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
