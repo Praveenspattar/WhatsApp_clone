@@ -50,7 +50,7 @@ public class SignUpActivity extends AppCompatActivity {
                         progressDialog.dismiss();
 
                         if (task.isSuccessful()){
-                            Users user = new Users(binding.userName.getText().toString(), binding.etEmail.getText().toString(),
+                            Users user = new Users(binding.userNamelist.getText().toString(), binding.etEmail.getText().toString(),
                                     binding.etPassword.getText().toString());
 
                             String id = task.getResult().getUser().getUid();

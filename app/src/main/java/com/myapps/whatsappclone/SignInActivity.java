@@ -19,7 +19,6 @@ import com.google.android.gms.auth.api.identity.Identity;
 import com.google.android.gms.auth.api.identity.SignInClient;
 import com.google.android.gms.auth.api.identity.SignInCredential;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.api.ApiException;
@@ -154,7 +153,7 @@ public class SignInActivity extends AppCompatActivity {
                                             users.setUserId(user.getUid());
                                             users.setUserName(user.getDisplayName());
                                             users.setProfilepic(Objects.requireNonNull(user.getPhotoUrl()).toString());
-                                            database.getReference().child("Users").child(users.getUserId())
+                                            database.getReference().child("Users").child(user.getUid())
                                                     .setValue(users);
                                             Intent intent = new Intent(SignInActivity.this, MainActivity.class);
                                             startActivity(intent);
